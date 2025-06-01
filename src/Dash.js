@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Dash.css';
 
 const Dash = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
@@ -26,21 +28,34 @@ const Dash = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleMetricsClick = () => {
+    navigate('/auth');
+  };
+
+  const handleChoosePlan = () => {
+    navigate('/auth');
+  };
+
   return (
     <div className="gym-container">
       {/* Hero Section */}
       <section className="hero-section fade-in-section">
-      <img src="./logo.png" alt="Gym Logo" className="hero-logo" />
-         <img src="./metric1.png" alt="Metrics" className="Metrics" />
+        <img src="./logo.png" alt="Gym Logo" className="hero-logo" />
+        <img 
+          src="./metric1.png" 
+          alt="Metrics" 
+          className="Metrics clickable-metrics" 
+          onClick={handleMetricsClick}
+          style={{ cursor: 'pointer' }}
+        />
         <img src="/loginbackground.png" alt="Hero" className="hero-bg" />
         
         <div className="hero-overlay">
-          
           <h1>Keep your body<br />healthy<br />& in shape</h1>
           <p>
             In order to stay in shape and stay healthy, it is necessary to take a variety of steps, including a balanced and active lifestyle.
           </p>
-          <button className="join-btn">Join Now</button>
+          {/* Join Now button removed as requested */}
         </div>
       </section>
 
@@ -61,7 +76,7 @@ const Dash = () => {
           <div className="service"><img src="/boxing.png" alt="Boxing" /><p>BOXING</p></div>
           <div className="service"><img src="/yoga.png" alt="Yoga" /><p>YOGA</p></div>
           <div className="service"><img src="/phonebg.png" alt="Crossfit" /><p>CROSSFIT</p></div>
-          </div>
+        </div>
       </section>
 
       {/* Pricing Plans Section */}
@@ -82,7 +97,7 @@ const Dash = () => {
               <li>• Basic training guidance</li>
               <li>• Free Wi-Fi</li>
             </ul>
-            <button className="choose-plan-btn">Choose Plan</button>
+            <button className="choose-plan-btn" onClick={handleChoosePlan}>Choose Plan</button>
           </div>
 
           <div className="pricing-card">
@@ -99,7 +114,7 @@ const Dash = () => {
               <li>• Group classes</li>
               <li>• Sauna access</li>
             </ul>
-            <button className="choose-plan-btn">Choose Plan</button>
+            <button className="choose-plan-btn" onClick={handleChoosePlan}>Choose Plan</button>
           </div>
 
           <div className="pricing-card">
@@ -116,18 +131,17 @@ const Dash = () => {
               <li>• Priority booking</li>
               <li>• Massage therapy</li>
             </ul>
-            <button className="choose-plan-btn">Choose Plan</button>
+            <button className="choose-plan-btn" onClick={handleChoosePlan}>Choose Plan</button>
           </div>
         </div>
       </section>
 
       {/* Build Section */}
       <section className="build-section fade-in-section">
-      
         <div className="build-text">
           <h2><span>BUILD</span> YOUR BODY<br />TRANSFORM YOUR LIFE</h2>
           <img src="/transform.jpg" alt="Transform" className="build-image" />
-           </div>
+        </div>
       </section>
 
       {/* Testimonials Section */}
@@ -193,23 +207,20 @@ const Dash = () => {
       </section>
 
       <footer>
-  <div class="footer-container">
-    <div class="footer-contact">
-      <h4>Contact Us</h4>
-      <p>OG Gym</p>
-      <p>123 Fitness Street, Prayagraj, UP</p>
-      <p>Email: <a href="mailto:info@oggym.com">info@oggym.com</a></p>
-      <p>Phone: <a href="tel:+919876543210">+91 9876543210</a></p>
-  
+        <div className="footer-container">
+          <div className="footer-contact">
+            <h4>Contact Us</h4>
+            <p>OG Gym</p>
+            <p>123 Fitness Street, Prayagraj, UP</p>
+            <p>Email: <a href="mailto:info@oggym.com">info@oggym.com</a></p>
+            <p>Phone: <a href="tel:+919876543210">+91 9876543210</a></p>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; 2025 OG Gym. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+        </div>
+      </footer>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 OG Gym. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
-  </div>
-  </footer>
-
-    </div>
-    
   );
 };
 

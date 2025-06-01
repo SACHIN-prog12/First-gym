@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './landingpage.css';
-import phoneBg from './phonebg.png'; // Replace with your actual background image path
-import logo from './logo.png'; // Replace with your actual logo image path
+import phoneBg from './phonebg.png';
+import logo from './logo.png';
 
 const quotes = [
   "A Community For You,\nChallenge Yourself",
@@ -11,22 +12,25 @@ const quotes = [
 
 export default function LandingPage() {
   const [quoteIndex, setQuoteIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
       setQuoteIndex((prev) => (prev + 1) % quotes.length);
-    }, 4000); // change quote every 4 seconds
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
+  const handleGetStarted = () => {
+    navigate('/dashboard');
+  };
+
   return (
-    
     <div className="container">
       <div className="phone-frame">
-     
         <img src={phoneBg} alt="Background" className="phone-img" />
         <img src={logo} alt="Logo" className="logo" />
-
+        
         <div className="overlay">
           <div className="blurred-box">
             <p className="quote-text fade-in">{quotes[quoteIndex]}</p>
@@ -36,10 +40,11 @@ export default function LandingPage() {
               ))}
             </div>
           </div>
-          <button className="get-started">Get Started</button>
+          <button className="get-started" onClick={handleGetStarted}>
+            Get Started
+          </button>
         </div>
       </div>
     </div>
   );
 }
-

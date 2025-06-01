@@ -1,15 +1,30 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import LandingPage from './LandingPage'; // make sure this file exists
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import LandingPage from './LandingPage';
+import Dash from './Dash';
+import AuthPage from './AuthPage';
+//import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-       <Route path="/Landingpage" element={<LandingPage />} />
-    </Routes>
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Landing page route */}
+          <Route path="/" element={<LandingPage />} />
+          
+          {/* Dashboard route */}
+          <Route path="/dashboard" element={<Dash />} />
+          
+          {/* Auth page route */}
+          <Route path="/auth" element={<AuthPage />} />
+          
+          {/* Redirect any unknown routes to landing page */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
