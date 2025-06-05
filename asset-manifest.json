@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/First-gym/static/css/main.d83d072a.css",
+    "main.js": "/First-gym/static/js/main.472816d2.js",
+    "static/media/phonebg.png": "/First-gym/static/media/phonebg.639fbbc6d701536f93c0.png",
+    "static/media/logo.png": "/First-gym/static/media/logo.6b970115e17165cbd810.png",
+    "index.html": "/First-gym/index.html",
+    "main.d83d072a.css.map": "/First-gym/static/css/main.d83d072a.css.map",
+    "main.472816d2.js.map": "/First-gym/static/js/main.472816d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d83d072a.css",
+    "static/js/main.472816d2.js"
+  ]
+}
