@@ -40,22 +40,19 @@ const Dash = () => {
     <div className="gym-container">
       {/* Hero Section */}
       <section className="hero-section fade-in-section">
-        <img src=".logo.png" alt="Gym Logo" className="hero-logo" />
+        <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Gym Logo" className="hero-logo" />
         <img 
-          src=".metric1.png" 
-          alt="Metrics" 
-          className="Metrics clickable-metrics" 
+          src={`${process.env.PUBLIC_URL}/metric1.png`} alt="Metrics" className="Metrics clickable-metrics" 
           onClick={handleMetricsClick}
           style={{ cursor: 'pointer' }}
         />
-        <img src="loginbackground.png" alt="Hero" className="hero-bg" />
+        <img src={`${process.env.PUBLIC_URL}/loginbackground.png`} alt="Hero" className="hero-bg" />
         
         <div className="hero-overlay">
           <h1>Keep your body<br />healthy<br />& in shape</h1>
           <p>
             In order to stay in shape and stay healthy, it is necessary to take a variety of steps, including a balanced and active lifestyle.
           </p>
-          {/* Join Now button removed as requested */}
         </div>
       </section>
 
@@ -63,9 +60,9 @@ const Dash = () => {
       <section className="stats-section fade-in-section">
         <h2>We raise your <br /><span>Confidence</span></h2>
         <div className="stats">
-          <div><strong>10k+</strong><p>Members</p></div>
+          <div><strong>1000+</strong><p>Members</p></div>
           <div><strong>60+</strong><p>Fitness</p></div>
-          <div><strong>42+</strong><p>Best Coaches</p></div>
+          <div><strong>6+</strong><p>Best Coaches</p></div>
         </div>
       </section>
 
@@ -73,9 +70,9 @@ const Dash = () => {
       <section className="services-section fade-in-section">
         <h3>We provide the best service to increase your confidence</h3>
         <div className="services">
-          <div className="service"><img src="boxing.png" alt="Boxing" /><p>BOXING</p></div>
-          <div className="service"><img src="yoga.png" alt="Yoga" /><p>YOGA</p></div>
-          <div className="service"><img src="phonebg.png" alt="Crossfit" /><p>CROSSFIT</p></div>
+          <div className="service"><img src={`${process.env.PUBLIC_URL}/boxing.png`} alt="Boxing" /><p>BOXING</p></div>
+          <div className="service"><img src={`${process.env.PUBLIC_URL}/yoga.png`} alt="Yoga" /><p>YOGA</p></div>
+          <div className="service"><img src={`${process.env.PUBLIC_URL}/phonebg.png`} alt="Crossfit" /><p>CROSSFIT</p></div>
         </div>
       </section>
 
@@ -140,7 +137,7 @@ const Dash = () => {
       <section className="build-section fade-in-section">
         <div className="build-text">
           <h2><span>BUILD</span> YOUR BODY<br />TRANSFORM YOUR LIFE</h2>
-          <img src="transform.jpg" alt="Transform" className="build-image" />
+          <img src={`${process.env.PUBLIC_URL}/transform.jpg`} alt="Transform" className="build-image" />
         </div>
       </section>
 
