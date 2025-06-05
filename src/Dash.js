@@ -40,15 +40,15 @@ const Dash = () => {
     <div className="gym-container">
       {/* Hero Section */}
       <section className="hero-section fade-in-section">
-        <img src="./logo.png" alt="Gym Logo" className="hero-logo" />
+        <img src=".logo.png" alt="Gym Logo" className="hero-logo" />
         <img 
-          src="./metric1.png" 
+          src=".metric1.png" 
           alt="Metrics" 
           className="Metrics clickable-metrics" 
           onClick={handleMetricsClick}
           style={{ cursor: 'pointer' }}
         />
-        <img src="/loginbackground.png" alt="Hero" className="hero-bg" />
+        <img src="loginbackground.png" alt="Hero" className="hero-bg" />
         
         <div className="hero-overlay">
           <h1>Keep your body<br />healthy<br />& in shape</h1>
@@ -73,9 +73,9 @@ const Dash = () => {
       <section className="services-section fade-in-section">
         <h3>We provide the best service to increase your confidence</h3>
         <div className="services">
-          <div className="service"><img src="/boxing.png" alt="Boxing" /><p>BOXING</p></div>
-          <div className="service"><img src="/yoga.png" alt="Yoga" /><p>YOGA</p></div>
-          <div className="service"><img src="/phonebg.png" alt="Crossfit" /><p>CROSSFIT</p></div>
+          <div className="service"><img src="boxing.png" alt="Boxing" /><p>BOXING</p></div>
+          <div className="service"><img src="yoga.png" alt="Yoga" /><p>YOGA</p></div>
+          <div className="service"><img src="phonebg.png" alt="Crossfit" /><p>CROSSFIT</p></div>
         </div>
       </section>
 
@@ -140,7 +140,7 @@ const Dash = () => {
       <section className="build-section fade-in-section">
         <div className="build-text">
           <h2><span>BUILD</span> YOUR BODY<br />TRANSFORM YOUR LIFE</h2>
-          <img src="/transform.jpg" alt="Transform" className="build-image" />
+          <img src="transform.jpg" alt="Transform" className="build-image" />
         </div>
       </section>
 
